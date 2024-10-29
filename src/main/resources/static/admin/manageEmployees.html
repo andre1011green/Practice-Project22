@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Employees</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="../IMAGES/main-logo.png" >
+    <link rel='stylesheet' type='text/css' href='../CSS/f2ManagerStyles.css'  >
+</head>
+<body>
+<h1>Relative To Employees</h1>
+<div id="banner" class="banner">
+
+</div>
+<div id="companyEmployees">
+
+</div>
+<div id="addordeleteEmployee">
+    <form id="addEmployee" method="post" action="/admin/addEmployee">
+        <fieldset>
+            <legend>On Board Employee</legend>
+        <label for="role">Employee Type</label>
+        <select name="role" id="role">
+            <option value="ROLE_EMPLOYEE">Employee</option>
+            <option value="ROLE_ADMIN">Admin</option>
+        </select>
+        <input type="hidden" id="enabled" name="enabled" value="1">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <label for="jobtitle">Job Title</label>
+        <select name="jobtitle" id="jobtitle">
+            <option value="CEO">Chief Executive Officer</option>
+            <option value="VP">Vice President</option>
+            <option value="CFO">Chief Financial Officer</option>
+            <option value="COO">Chief Operating Officer</option>
+            <option value="CIO">Chief Information Office</option>
+            <option value="CTO">Chief Technology Officer</option>
+            <option value="CSO">Chief Security Officer</option>
+            <option value="CPO">Chief Product Officer</option>
+            <option value="GM">General Manager</option>
+            <option value="HR_Manager">Human Resource Manager</option>
+            <option value="Sys_Manager">Systems Manager</option>
+        </select>
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" id="firstname">
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" id="lastname">
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" id="phone"><br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+            <input type="submit" value="Create Employee">
+        </fieldset>
+    </form>
+
+</div>
+<br><br><br>
+<div id="fireMe">
+    <form id="movingON" method="post" action="/admin/deleteEmployee" >
+        <fieldset>
+            <label for = "employeeid">Employee ID</label>
+            <input type="number" id="employeeid" name="employeeid">
+            <input type="submit" value="Delete Employee">
+        </fieldset>
+    </form>
+</div>
+<div id="goodBye">
+    <form id='farewell' method='post' action='/admin/managerLogout'>
+    <input type='submit' value='Logout Out'>
+    </form>
+</div>
+
+<script type='text/javascript' src='../JAVASCRIPT/sideShow.js'  ></script>
+<script type='text/javascript' src='../JAVASCRIPT/devineCreation.js'  ></script>
+</body>
+</html>

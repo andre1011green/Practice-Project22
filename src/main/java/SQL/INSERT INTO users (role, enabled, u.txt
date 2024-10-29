@@ -1,0 +1,23 @@
+INSERT INTO users (role, enabled, username, jobtitle, firstname, lastname, phone, email, password, datehired, datefired)
+VALUES ('ROLE_EMPLOYEE', 'true', 'Fatfreddy', 'CEO', 'Fred', 'Flinstone', '555-123-4567', 'flinstoneF@Bedrockquarry.com', 
+'$2a$12$Lg6dcrZu22XCOIWVgQkDFu6U8vrJwXuoEC89QxaVlsg/5axYjCR0u', '2020-01-06 12:10:25.000', NULL); 
+
+
+INSERT INTO users (role, enabled, username, jobtitle, firstname, lastname, phone, email, password, datehired, datefired)
+VALUES ('ROLE_EMPLOYEE', 'true', 'Newphew', 'VP', 'Barney', 'Rubble', '555-223-7890', 'rubbleB@Bedrockquarry.com', 
+'$2a$12$nGq7HpQYaNvrw5AUzNgrRuY/zl/sRPUEQ/RK.kZwtbhA5wFFEW2gC', '2020-01-06 12:20:35.000', NULL);
+
+
+INSERT INTO users (role, enabled, username, jobtitle, firstname, lastname, phone, email, password, datehired, datefired)
+VALUES ('ROLE_EMPLOYEE', 'true', 'Runner', 'HR_Manager', 'Willma', 'Flinstone', '555-333-1290', 'flintstoneWB@Bedrockquarry.com', 
+'$2a$12$MtKJxOuHXgGfyI.urGJ3.eEDClmvNa8u9gh9XXTCxcDdg9JxOpbIW', '2020-01-06 13:30:05.000', NULL);
+
+
+INSERT INTO users (role, enabled, username, jobtitle, firstname, lastname, phone, email, password, datehired, datefired)
+VALUES ('ROLE_EMPLOYEE', 'true', 'Soright', 'OP_Manager', 'Betty', 'Rubble', '555-445-1793', 'flintstoneB@Bedrockquarry.com', 
+'$2a$12$NN3AZwM1WBHbDpAoc5eCIehPM.LoZ4PoYYX4MGNtvvl8BJfa5XCXS', '2020-01-06 14:14:15.000', NULL);
+
+
+INSERT INTO users (role, enabled, username, jobtitle, firstname, lastname, phone, email, password, datehired, datefired)
+VALUES ('ROLE_ADMIN', 'true', 'Bossman', 'Sys_Manager', 'George', 'Slate', '555-404-6157', 'slateG@Bedrockquarry.com', 
+'$2a$12$sifyIxSWsggrPG2wLEL32.8d3AxwkR/fq.AZ.kEtjWtcnm40X5TIq', '2020-01-06 16:17:18.000', NULL);
