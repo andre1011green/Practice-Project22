@@ -20,7 +20,7 @@ function ether()
     const managerInfoDiv = document.getElementById('managerInfo');
     const allEmployeesDiv = document.getElementById('allEmployees');
 
-    fetch('http://localhost:8080/admin/loggInUser')
+    fetch('http://ebonymailandre.us-west-1.elasticbeanstalk.com/admin/loggInUser')
           .then(response => response.text())
           .then(text => {
               welcomeMrManager.innerHTML = "<h2 id='welcomeManagerDiv'>Welcome  " + text  +
@@ -28,13 +28,13 @@ function ether()
               "<input type='submit' value='Sign Out'></form></h2>";
           });
 
-    fetch('http://localhost:8080/admin/currentUserInfo')
+    fetch('http://ebonymailandre.us-west-1.elasticbeanstalk.com/admin/currentUserInfo')
               .then(response => response.text())
               .then(text => {
                   managerInfoDiv.innerHTML = "<h4 id='managerInfoMessage'>  " + text + "</h4>";
               });
 
-    fetch('http://localhost:8080/admin/displayAllTickets')
+    fetch('http://ebonymailandre.us-west-1.elasticbeanstalk.com/admin/displayAllTickets')
                   .then(response => response.text())
                   .then(text => {
                                   let billy = JSON.parse(text);

@@ -23,6 +23,7 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.regex.Pattern;
 
+
 /**
  * This is an MVC application and therefore web controllers are used to trigger certain action when the web browser hits
  * a certain end point. For example http:localhost:8080/ or http:localhost:8080/index will display the web page index.html
@@ -507,6 +508,20 @@ public class UserController
         userRepository.deleteOneUser(employeeid);
         return "redirect:/admin/manageEmployees.html";
     }
+
+    @GetMapping("/error/manager-access-denied")
+    public String managerAccessDenied()
+    {
+        return "/user/managerErrorPage.html"; // The name of the error page view
+    }
+
+    @GetMapping("/error/access-denied")
+    public String accessDenied()
+    {
+        return "/user/accessDeniedPage.html"; // The name of the generic error page view
+    }
+
+
 
 
 }

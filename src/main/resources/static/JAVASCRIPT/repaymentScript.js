@@ -20,7 +20,7 @@ function ether()
    const reimbursementDiv = document.getElementById('MyReimbursements');
 
 
-    fetch('http://localhost:8080/user/loggInUser')
+    fetch('http://ebonymailandre.us-west-1.elasticbeanstalk.com/user/loggInUser')
       .then(response => response.text())
       .then(text => {
           welcomeDiv.innerHTML = "<h2 id='welcomeMessage'>Welcome  " + text + "</h2>" +
@@ -30,13 +30,13 @@ function ether()
       });
 
 
-    fetch('http://localhost:8080/user/currentUserInfo')
+    fetch('http://ebonymailandre.us-west-1.elasticbeanstalk.com/user/currentUserInfo')
           .then(response => response.text())
           .then(text => {
               userInfoDiv.innerHTML = "<h4 id='userInfoMessage'>  " + text + "</h4>";
           });
 
-    fetch('http://localhost:8080/user/displayMyTickets')
+    fetch('http://ebonymailandre.us-west-1.elasticbeanstalk.com/user/displayMyTickets')
               .then(response => response.text())
               .then(text => {
                               let billy = JSON.parse(text);

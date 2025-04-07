@@ -13,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+
 /**
  * The purpose of this class is to authenticate users
  */
@@ -21,6 +22,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class MultiConfiguation
 {
+
     /**
      * customUserDetailsService is an object that uses customUserDetail along with Spring Security. It loads user-specific data
      */
@@ -142,7 +144,12 @@ public class MultiConfiguation
                         .requestMatchers("/JAVASCRIPT/**").permitAll()
                         .requestMatchers("/user/home").hasRole("EMPLOYEE")
                         .anyRequest().authenticated()
+                );
+
+        http.exceptionHandling(exception ->
+                exception.accessDeniedHandler(new CustomAccessDeniedHandler())
                 )
+
                 .formLogin(formLogin ->
                         formLogin
                                 .loginPage("/user/index.html").permitAll()
